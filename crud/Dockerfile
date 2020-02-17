@@ -1,0 +1,4 @@
+FROM mongo
+VOLUME /data/db
+EXPOSE 28017
+
