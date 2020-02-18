@@ -42,6 +42,7 @@ const Home = () => {
                                 <tr>
                                     <td>Name</td>
                                     <td>Adress</td>
+                                    <td>Details</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -53,6 +54,9 @@ const Home = () => {
                                             </td>
                                             <td>
                                                 {c.address}
+                                            </td>
+                                            <td>
+                                                <Link to={'/show/${c.id}'}><span className="glyphicon glyphicon-plus-sign" aria-hidden="true">Detail</span></Link>
                                             </td>
                                         </tr>
                                     )
