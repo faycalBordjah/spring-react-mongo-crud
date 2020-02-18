@@ -56,7 +56,7 @@ const Home = () => {
                                                 {c.address}
                                             </td>
                                             <td>
-                                                <Link to={'/show/${c.id}'}><span className="glyphicon glyphicon-plus-sign" aria-hidden="true">Detail</span></Link>
+                                                <Link to={`/show/${c.id}`}><span className="glyphicon glyphicon-plus-sign" aria-hidden="true">Detail</span></Link>
                                             </td>
                                         </tr>
                                     )
