@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
-import axios from 'axios';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Create from './components/Create';
 import Edit from './components/Edit';
@@ -19,8 +17,8 @@ function App() {
 
         <Switch>
           <Route path="/create" component={Create} />
-          <Route path="/edit:id" component={Edit} />
-          <Route path="/show:id" component={Show} />
+          <Route path="/edit/:id" component={Edit} />
+          <Route path="/show/:id" component={Show} />
           <Route path="/" component={Home} />
         </Switch>
       </Router>
