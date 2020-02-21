@@ -1,7 +1,7 @@
 name: Workflow backend
 on: [push]
 jobs:
-  compile:
+  build:
     name: compile java
     runs-on: ubuntu-latest
     steps:
@@ -15,3 +15,8 @@ jobs:
           architecture: x64 # (x64 or x86) - defaults to x64
       - name: compile with maven 
         run: mvn -f backend/pom.xml clean compile
+      - name: create the cache 
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
